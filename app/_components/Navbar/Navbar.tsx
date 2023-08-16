@@ -19,7 +19,7 @@ export default function Navbar() {
               aria-label="WindUI logo"
               aria-current="page"
               className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
-              href="javascript:void(0)"
+              href="#"
             >
               <svg
                 width="300"
@@ -55,7 +55,7 @@ export default function Navbar() {
                     aria-haspopup="false"
                     tabIndex={0}
                     className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                    href="javascript:void(0)"
+                    href="#"
                   >
                     <span>Home</span>
                   </a>
@@ -67,7 +67,7 @@ export default function Navbar() {
                     aria-haspopup="false"
                     tabIndex={0}
                     className="flex items-center gap-2 py-4  transition-colors duration-300 hover:text-emerald-600 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                    href="javascript:void(0)"
+                    href="#"
                   >
                     <span>Features</span>
                   </a>
@@ -78,7 +78,7 @@ export default function Navbar() {
                     aria-haspopup="false"
                     tabIndex={0}
                     className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                    href="javascript:void(0)"
+                    href="#"
                   >
                     <span>About</span>
                   </a>
@@ -89,7 +89,7 @@ export default function Navbar() {
                     aria-haspopup="false"
                     tabIndex={0}
                     className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                    href="javascript:void(0)"
+                    href="#"
                   >
                     <span>US</span>
                   </a>
