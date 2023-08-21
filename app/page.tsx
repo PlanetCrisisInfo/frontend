@@ -1,5 +1,4 @@
 import Button from "./_components/Button/Button"
-import { Carousel } from "./_components/Carousel/Carousel"
 
 export default function Home() {
   return (
@@ -8,7 +7,6 @@ export default function Home() {
         <span className="text-blue-500">Planet</span>
         <span className="text-green-500">Crisis</span>
         <Button />
-        <Carousel  />
       </h1>
     </main>
   )
