@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  button {
+    padding: 15px 32px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+}
+
+@layer utilities {
+  .sad {
+    @apply bg-rose-900 text-slate-100;
+
+    &.btn {
+      @apply bg-yellow-600  text-slate-100 hover:bg-yellow-500;
+    }
+  }
+  .happy {
+    @apply bg-emerald-600 text-slate-100;
+
+    &.btn {
+      @apply bg-slate-200  text-slate-700 hover:bg-slate-100;
+    }
+  }
+  .neutral {
+    @apply bg-gray-100 text-slate-700;
+    &.btn {
+      @apply bg-cyan-600  text-slate-100 hover:bg-cyan-400;
+    }
+  }
+}

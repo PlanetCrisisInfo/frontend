@@ -1,7 +1,11 @@
-import styles from "./Button.module.css"
+import { Component, ThemeMode } from "@/types"
 
-function Button() {
-  return <button className={styles.btn}>Button</button>
+type Props = {
+  themeMode: ThemeMode
+}
+const Button: Component<Props> = (props) => {
+  const { themeMode } = props
+  return <button className={`${themeMode} btn`}>Button</button>
 }
 
 export default Button
