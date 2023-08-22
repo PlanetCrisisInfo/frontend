@@ -1,10 +1,16 @@
 "use client"
 import React, { createContext, useState } from "react"
 
-export const NavbarContext = createContext({
+type CreateContextType = {
+  isToggleOpen: boolean
+  setIsToggleOpen: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const NavbarContext = createContext<CreateContextType>({
   isToggleOpen: false,
-  setIsToggleOpen: (value: boolean) => {},
+  setIsToggleOpen: () => {},
 })
+
 export default function NavbarContextProvider({
   children,
 }: {

@@ -1,12 +1,8 @@
 import Button from "@/app/_components/Button/Button"
 
-import type { Page, ThemeMode } from "@/types"
+import type { ThemeMode } from "@/types"
 
-type Props = {
-  something?: string
-}
-
-const HomePage: Page<Props> = (props) => {
+const HomePage = function () {
   const themeMode: ThemeMode = "neutral"
 
   return (
