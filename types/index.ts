@@ -1,6 +1,4 @@
-export type ComponentProps<T> = T
-
-export type Component<T> = React.FC<ComponentProps<T>>
+export type Component<T> = React.FC<T>
 
 export type PageProps = {
   params: any

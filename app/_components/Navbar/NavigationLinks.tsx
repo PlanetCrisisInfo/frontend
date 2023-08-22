@@ -1,13 +1,15 @@
 "use client"
 import { useContext } from "react"
 
+import { Component } from "@/types"
+
 import { NavbarContext } from "./NavbarContextProvider"
 
-interface NavigationLinksProps {
+type Props = {
   children: React.ReactNode
 }
 
-export default function NavigationLinks({ children }: NavigationLinksProps) {
+const NavigationLinks: Component<Props> = ({ children }) => {
   const { isToggleOpen } = useContext(NavbarContext)
   return (
     <ul
@@ -23,3 +25,5 @@ export default function NavigationLinks({ children }: NavigationLinksProps) {
     </ul>
   )
 }
+
+export default NavigationLinks

@@ -1,9 +1,13 @@
 "use client"
 import { useContext } from "react"
 
+import { Component } from "@/types"
+
 import { NavbarContext } from "./NavbarContextProvider"
 
-export default function Hamburger() {
+type Props = {}
+
+const Hamburger: Component<Props> = () => {
   const { isToggleOpen, setIsToggleOpen } = useContext(NavbarContext)
 
   return (
@@ -36,3 +40,5 @@ export default function Hamburger() {
     </button>
   )
 }
+
+export default Hamburger
