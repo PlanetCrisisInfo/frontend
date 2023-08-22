@@ -35,6 +35,9 @@ const Navbar: Component<Props> = () => {
                   layout=""
                   width={174}
                   height={131}
+                  quality={100}
+                  priority={true}
+                  loading="eager"
                 />
               </div>
             </Link>
