@@ -30,7 +30,7 @@ const Navbar: Component<Props> = () => {
             >
               <div className="max-w-[100px]">
                 <Image
-                  src="/images/planet-crisis-logo.svg"
+                  src="/images/planet-crisis-logo.png"
                   alt="Planet Crisis Logo"
                   layout=""
                   width={174}
