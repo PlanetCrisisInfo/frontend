@@ -1,7 +1,5 @@
 "use server"
 
-import { revalidatePath } from "next/cache"
-
 import { ContactUs } from "@/types"
 
 import { ContactUsValidation } from "../_validationModels/models"
@@ -16,5 +14,4 @@ export const actionSubmitContactForm = async (data: ContactUs) => {
   }
 
   return { success: true, data: result.data }
-  revalidatePath("/contactus")
 }
