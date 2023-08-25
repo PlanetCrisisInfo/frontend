@@ -22,7 +22,6 @@ const ContactUsForm: Component<Props> = () => {
     if (response?.error) {
       console.log(response.error)
     }
-
     reset()
   }
 
