@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 
-import { UserModel } from "@/app/_models/User"
+import { UserModel } from "@/app/_validationModels/models"
 
 export async function GET(req: Request) {
   console.log(req)

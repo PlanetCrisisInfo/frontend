@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-import { UserModel } from "@/app/_models/User"
+import { ContactUsValidation } from "@/app/_validationModels/models"
 
 export type Component<T> = React.FC<T>
 
@@ -11,4 +11,4 @@ export type PageProps = {
 
 export type ThemeMode = "happy" | "sad" | "neutral"
 
-export type User = z.infer<typeof UserModel>
+export type ContactUs = z.infer<typeof ContactUsValidation>

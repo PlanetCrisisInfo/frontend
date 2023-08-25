@@ -5,7 +5,6 @@ import { Inter, Roboto } from "next/font/google"
 import Navbar from "@/app/_components/Navbar/Navbar"
 
 import type { Metadata } from "next"
-
 const inter = Inter({ subsets: ["latin"] })
 const roboto = Roboto({
   subsets: ["cyrillic-ext"],
