@@ -1,6 +1,5 @@
 import { headers } from "next/headers"
 
-type Method = "GET" | "POST" | "PUT" | "DELETE"
 //discriminator
 type FetchServerForGetAndDelete = {
   method: "GET" | "DELETE"
