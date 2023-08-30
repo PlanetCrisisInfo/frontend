@@ -1,9 +1,8 @@
 import Button from "@/app/_components/Button/Button"
 
-import type { PageProps, ThemeMode } from "@/types"
+import type { ThemeMode } from "@/types"
 
-const HomePage = async function ({}: PageProps) {
-  console
+const HomePage = function () {
   const themeMode: ThemeMode = "neutral"
 
   return (
