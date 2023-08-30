@@ -2,12 +2,18 @@
 import { SubmitHandler, useForm } from "react-hook-form"
 
 import { actionSubmitContactForm } from "@/app/_actions/actions"
+import { useStatus } from "@/app/_hooks/useStatus"
 import { ContactUsValidation } from "@/app/_validationModels/models"
 import { Component, ContactUs } from "@/types"
 import { zodResolver } from "@hookform/resolvers/zod"
 
+import Button from "../Button/Button"
+
 type Props = {}
+
 const ContactUsForm: Component<Props> = () => {
+  const { status, setStatus } = useStatus()
+
   const {
     register,
     handleSubmit,
@@ -18,10 +24,29 @@ const ContactUsForm: Component<Props> = () => {
   })
 
   const onSubmit: SubmitHandler<ContactUs> = async (data) => {
+    setStatus(() => ({
+      isLoading: true,
+      isSuccessful: false,
+      isError: false,
+      errorMessage: null,
+    }))
     const response = await actionSubmitContactForm(data)
     if (response?.error) {
       console.log(response.error)
+      setStatus((preState) => ({
+        ...preState,
+        isLoading: false,
+        isError: true,
+        isSuccessful: false,
+        message: "Something went wrong, please try again later",
+      }))
     }
+
+    setStatus((preState) => ({
+      ...preState,
+      isLoading: false,
+      isSuccessful: true,
+    }))
     reset()
   }
 
@@ -39,7 +64,6 @@ const ContactUsForm: Component<Props> = () => {
           <p className="text-rose-300">{errors.username?.message}</p>
         )}
       </div>
-
       <div className="mb-6">
         <input
           type="email"
@@ -52,7 +76,6 @@ const ContactUsForm: Component<Props> = () => {
           <p className="text-rose-300">{errors.email?.message}</p>
         )}
       </div>
-
       <div className="mb-6">
         <textarea
           id="message"
@@ -64,13 +87,13 @@ const ContactUsForm: Component<Props> = () => {
           <p className="text-rose-300">{errors.message?.message}</p>
         )}
       </div>
-
-      <button
+      <Button
+        text="Submit"
         type="submit"
-        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      >
-        Submit
-      </button>
+        isLoading={status.isLoading}
+        loadingText="Submitting"
+        themeMode="happy"
+      />
     </form>
   )
 }

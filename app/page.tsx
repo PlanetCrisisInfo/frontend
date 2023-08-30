@@ -18,7 +18,7 @@ const HomePage = async function ({}: PageProps) {
           Crisis
         </h1>
         <hr />
-        <Button themeMode={themeMode} />
+        <Button text="Button" />
       </section>
     </main>
   )
