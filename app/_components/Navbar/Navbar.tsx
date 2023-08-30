@@ -1,11 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import { Component } from "@/types"
-
 import Hamburger from "./Hamburger"
 import NavbarContextProvider from "./NavbarContextProvider"
 import NavigationLinks from "./NavigationLinks"
+
+import type { Component } from "@/types"
 
 type Props = {}
 

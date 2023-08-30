@@ -1,11 +1,6 @@
 import { useState } from "react"
 
-export type Status = {
-  isLoading: boolean
-  isSuccessful: boolean
-  isError: boolean
-  errorMessage: string | null
-}
+import type { Status } from "@/types"
 
 export const useStatus = () => {
   const [status, setStatus] = useState<Status>({

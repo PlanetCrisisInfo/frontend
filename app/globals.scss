@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("react-toastify/dist/ReactToastify.css");
 @layer base {
   button {
     padding: 0.9375rem 2rem;

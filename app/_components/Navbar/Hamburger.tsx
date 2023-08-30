@@ -1,9 +1,9 @@
 "use client"
 import { useContext } from "react"
 
-import { Component } from "@/types"
-
 import { NavbarContext } from "./NavbarContextProvider"
+
+import type { Component } from "@/types"
 
 type Props = {}
 

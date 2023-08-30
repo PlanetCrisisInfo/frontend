@@ -1,17 +1,27 @@
 "use server"
 
-import { ContactUs } from "@/types"
+import type { ContactUs, Response } from "@/types"
 
 import { ContactUsValidation } from "../_validationModels/models"
 
 // action and whatever it is
-export const actionSubmitContactForm = async (data: ContactUs) => {
+export const actionSubmitContactForm = async (
+  data: ContactUs
+): Promise<Response> => {
   //your form inputs fields
   const result = ContactUsValidation.safeParse(data)
 
   if (!result.success) {
-    return { success: false, error: result.error.format() }
+    return {
+      status: "error",
+      data: null,
+      message: result.error.message,
+    }
   }
 
-  return { success: true, data: result.data }
+  return {
+    status: "success",
+    data: { something: "ok" },
+    message: null,
+  }
 }

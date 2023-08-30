@@ -1,4 +1,4 @@
-import { PageProps } from "@/types"
+import type { PageProps } from "@/types"
 
 import ContactUsForm from "../_components/ContactUsForm/ContactUsForm"
 
