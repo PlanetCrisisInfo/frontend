@@ -33,6 +33,10 @@
     &.link-active {
       @apply text-emerald-500;
     }
+
+    &.secondary-link {
+      @apply py-3 hover:text-yellow-500;
+    }
   }
   .happy {
     &.bg {
@@ -50,10 +54,14 @@
     &.link-active {
       @apply text-emerald-500;
     }
+
+    &.secondary-link {
+      @apply py-3 hover:text-sky-400;
+    }
   }
   .neutral {
     &.bg {
-      @apply bg-gray-100 text-slate-700;
+      @apply bg-gray-300 text-slate-800;
     }
 
     &.btn {
@@ -66,6 +74,10 @@
 
     &.link-active {
       @apply text-emerald-500;
+    }
+
+    &.secondary-link {
+      @apply py-3 hover:text-emerald-500;
     }
   }
 }

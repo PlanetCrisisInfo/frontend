@@ -1,11 +1,11 @@
 import ContactUsForm from "../_components/ContactUsForm/ContactUsForm"
-import Navbar from "../_components/Navbar/Navbar"
+import SecondaryBar from "../_components/SecondaryBar/SecondaryBar"
 
 export default function PollutionPage() {
   const themeMode = "sad"
   return (
     <>
-      <Navbar />
+      <SecondaryBar themeMode={themeMode} />
       <main>
         <section id="heading" className="container mx-auto">
           <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">

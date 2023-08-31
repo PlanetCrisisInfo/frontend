@@ -1,6 +1,6 @@
 import Button from "@/app/_components/Button/Button"
 
-import Navbar from "./_components/Navbar/Navbar"
+import SecondaryBar from "./_components/SecondaryBar/SecondaryBar"
 
 import type { ThemeMode } from "@/types"
 const HomePage = function () {
@@ -8,7 +8,7 @@ const HomePage = function () {
 
   return (
     <>
-      <Navbar />
+      <SecondaryBar themeMode={themeMode} />
       <main
         className={`flex min-h-screen flex-col items-center justify-between p-24`}
       >
