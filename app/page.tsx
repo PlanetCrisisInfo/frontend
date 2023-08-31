@@ -20,7 +20,7 @@ const HomePage = function () {
             Crisis
           </h1>
           <hr />
-          <Button text="Button" />
+          <Button text="Button" themeMode={themeMode} />
         </section>
       </main>
     </>

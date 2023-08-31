@@ -13,7 +13,7 @@ import Button from "../Button/Button"
 import type { Component, ContactUs, ThemeMode } from "@/types"
 
 type Props = {
-  themeMode: ThemeMode
+  themeMode?: ThemeMode
 }
 
 const ContactUsForm: Component<Props> = ({ themeMode = "neutral" }) => {

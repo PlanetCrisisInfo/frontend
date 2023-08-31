@@ -1,9 +1,7 @@
-import type { PageProps } from "@/types"
-
 import ContactUsForm from "../_components/ContactUsForm/ContactUsForm"
 import Navbar from "../_components/Navbar/Navbar"
 
-export default function PollutionPage({}: PageProps) {
+export default function PollutionPage() {
   const themeMode = "sad"
   return (
     <>

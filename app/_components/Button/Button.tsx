@@ -1,7 +1,7 @@
 import type { Component, ThemeMode } from "@/types"
 
 type Props = {
-  themeMode?: ThemeMode
+  themeMode: ThemeMode
   text: string
   type?: "button" | "submit" | "reset"
   isLoading?: boolean
