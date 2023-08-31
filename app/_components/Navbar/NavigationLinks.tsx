@@ -3,11 +3,13 @@ import { useContext } from "react"
 
 import { NavbarContext } from "./NavbarContextProvider"
 
-interface NavigationLinksProps {
+import type { Component } from "@/types"
+
+type Props = {
   children: React.ReactNode
 }
 
-export default function NavigationLinks({ children }: NavigationLinksProps) {
+const NavigationLinks: Component<Props> = ({ children }) => {
   const { isToggleOpen } = useContext(NavbarContext)
   return (
     <ul
@@ -23,3 +25,5 @@ export default function NavigationLinks({ children }: NavigationLinksProps) {
     </ul>
   )
 }
+
+export default NavigationLinks

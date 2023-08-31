@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("react-toastify/dist/ReactToastify.css");
+@layer base {
+  button {
+    padding: 0.9375rem 2rem;
+    border-radius: 0.625rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+
+  section {
+    padding: 3.75rem 0;
+  }
+}
+
+@layer utilities {
+  .sad {
+    &.bg {
+      @apply bg-rose-900 text-slate-100;
+    }
+
+    &.btn {
+      @apply bg-yellow-600  text-slate-100 hover:bg-yellow-500;
+    }
+
+    &.link {
+      @apply first-line:flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8;
+    }
+
+    &.link-active {
+      @apply text-emerald-500;
+    }
+
+    &.secondary-link {
+      @apply py-3 hover:text-yellow-500;
+    }
+  }
+  .happy {
+    &.bg {
+      @apply bg-emerald-600 text-slate-100;
+    }
+
+    &.btn {
+      @apply bg-slate-200  text-slate-700 hover:bg-slate-100;
+    }
+
+    &.link {
+      @apply first-line:flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8;
+    }
+
+    &.link-active {
+      @apply text-emerald-500;
+    }
+
+    &.secondary-link {
+      @apply py-3 hover:text-sky-400;
+    }
+  }
+  .neutral {
+    &.bg {
+      @apply bg-gray-300 text-slate-800;
+    }
+
+    &.btn {
+      @apply bg-gradient-to-r from-sky-400 to-emerald-600 text-slate-100 hover:bg-gradient-to-r hover:from-emerald-700 hover:to-sky-500;
+    }
+
+    &.link {
+      @apply first-line:flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8;
+    }
+
+    &.link-active {
+      @apply text-emerald-500;
+    }
+
+    &.secondary-link {
+      @apply py-3 hover:text-emerald-500;
+    }
+  }
+}
