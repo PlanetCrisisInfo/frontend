@@ -1,23 +1,33 @@
+"use client"
+import { clsx } from "clsx"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 import Hamburger from "./Hamburger"
 import NavbarContextProvider from "./NavbarContextProvider"
 import NavigationLinks from "./NavigationLinks"
 
-import type { Component } from "@/types"
+import type { Component, ThemeMode } from "@/types"
+type Props = {
+  themeMode?: ThemeMode
+}
 
-type Props = {}
+const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
+  const pathname = usePathname()
 
-const Navbar: Component<Props> = () => {
+  console.log(pathname)
+
   return (
     <>
       {/*<!-- Component: Basic Navbar --> */}
-      <header className="border-b-1 relative z-20 w-full border-b border-slate-200 bg-white/90 shadow-lg shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden ">
-        <div className="relative container mx-auto ">
+      <header
+        className={`border-b-1 relative z-20 w-full border-b border-slate-200  shadow-lg shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden`}
+      >
+        <div className="relative container mx-auto">
           <nav
             aria-label="main navigation"
-            className="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700"
+            className="flex h-[3.8rem] items-stretch justify-between font-medium text-slate-700"
             role="navigation"
           >
             {/*      <!-- Brand logo --> */}
@@ -28,11 +38,10 @@ const Navbar: Component<Props> = () => {
               className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
               href="/"
             >
-              <div className="max-w-[100px]">
+              <div className="max-w-[75px]  ">
                 <Image
                   src="/images/planet-crisis-logo.png"
                   alt="Planet Crisis Logo"
-                  layout=""
                   width={174}
                   height={131}
                   quality={100}
@@ -51,7 +60,9 @@ const Navbar: Component<Props> = () => {
                     role="menuitem"
                     aria-haspopup="false"
                     tabIndex={0}
-                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
+                    className={`${themeMode} link ${clsx({
+                      "link-active": pathname === "/",
+                    })} `}
                     href="/"
                   >
                     <span>Home</span>
@@ -63,10 +74,12 @@ const Navbar: Component<Props> = () => {
                     aria-current="page"
                     aria-haspopup="false"
                     tabIndex={0}
-                    className="flex items-center gap-2 py-4  transition-colors duration-300 hover:text-emerald-600 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                    href="/"
+                    className={`${themeMode} link ${clsx({
+                      "link-active": pathname === "/cleanest",
+                    })} `}
+                    href="/cleanest"
                   >
-                    <span>Features</span>
+                    <span>Cleanest</span>
                   </Link>
                 </li>
                 <li role="none" className="flex items-stretch">
@@ -74,13 +87,54 @@ const Navbar: Component<Props> = () => {
                     role="menuitem"
                     aria-haspopup="false"
                     tabIndex={0}
-                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                    href="/"
+                    className={`${themeMode} link ${clsx({
+                      "link-active": pathname === "/pollution",
+                    })} `}
+                    href="/pollution"
                   >
-                    <span>About</span>
+                    <span>Pollution</span>
                   </Link>
                 </li>
                 <li role="none" className="flex items-stretch">
+                  <Link
+                    role="menuitem"
+                    aria-haspopup="false"
+                    tabIndex={0}
+                    className={`${themeMode} link ${clsx({
+                      "link-active": pathname === "/disasters",
+                    })} `}
+                    href="/disasters"
+                  >
+                    <span>Disasters</span>
+                  </Link>
+                </li>
+                <li role="none" className="flex items-stretch">
+                  <Link
+                    role="menuitem"
+                    aria-haspopup="false"
+                    tabIndex={0}
+                    className={`${themeMode} link ${clsx({
+                      "link-active": pathname === "/temperatures",
+                    })} `}
+                    href="/temperatures"
+                  >
+                    <span>Temperatures</span>
+                  </Link>
+                </li>
+                <li role="none" className="flex items-stretch">
+                  <Link
+                    role="menuitem"
+                    aria-haspopup="false"
+                    tabIndex={0}
+                    className={`${themeMode} link ${clsx({
+                      "link-active": pathname === "/Extinct",
+                    })} `}
+                    href="/extinct"
+                  >
+                    <span>Extinct</span>
+                  </Link>
+                </li>
+                {/* <li role="none" className="flex items-stretch">
                   <Link
                     role="menuitem"
                     aria-haspopup="false"
@@ -90,7 +144,7 @@ const Navbar: Component<Props> = () => {
                   >
                     <span>ContactUs</span>
                   </Link>
-                </li>
+                </li> */}
               </NavigationLinks>
             </NavbarContextProvider>
           </nav>

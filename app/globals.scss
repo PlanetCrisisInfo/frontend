@@ -18,23 +18,54 @@
 
 @layer utilities {
   .sad {
-    @apply bg-rose-900 text-slate-100;
+    &.bg {
+      @apply bg-rose-900 text-slate-100;
+    }
 
     &.btn {
       @apply bg-yellow-600  text-slate-100 hover:bg-yellow-500;
     }
+
+    &.link {
+      @apply first-line:flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8;
+    }
+
+    &.link-active {
+      @apply text-emerald-500;
+    }
   }
   .happy {
-    @apply bg-emerald-600 text-slate-100;
+    &.bg {
+      @apply bg-emerald-600 text-slate-100;
+    }
 
     &.btn {
       @apply bg-slate-200  text-slate-700 hover:bg-slate-100;
     }
+
+    &.link {
+      @apply first-line:flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8;
+    }
+
+    &.link-active {
+      @apply text-emerald-500;
+    }
   }
   .neutral {
-    @apply bg-gray-100 text-slate-700;
+    &.bg {
+      @apply bg-gray-100 text-slate-700;
+    }
+
     &.btn {
       @apply bg-gradient-to-r from-sky-400 to-emerald-600 text-slate-100 hover:bg-gradient-to-r hover:from-emerald-700 hover:to-sky-500;
+    }
+
+    &.link {
+      @apply first-line:flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8;
+    }
+
+    &.link-active {
+      @apply text-emerald-500;
     }
   }
 }

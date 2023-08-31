@@ -1,19 +1,22 @@
 "use client"
 import { SubmitHandler, useForm } from "react-hook-form"
-import { toast, ToastContainer } from "react-toastify"
+import { ToastContainer, toast } from "react-toastify"
 
 import { actionSubmitContactForm } from "@/app/_actions/actions"
 import { toastSettings } from "@/app/_configs/toastOptions"
 import { useStatus } from "@/app/_hooks/useStatus"
 import { ContactUsValidation } from "@/app/_validationModels/models"
-import { Component, ContactUs } from "@/types"
 import { zodResolver } from "@hookform/resolvers/zod"
 
 import Button from "../Button/Button"
 
-type Props = {}
+import type { Component, ContactUs, ThemeMode } from "@/types"
 
-const ContactUsForm: Component<Props> = () => {
+type Props = {
+  themeMode: ThemeMode
+}
+
+const ContactUsForm: Component<Props> = ({ themeMode = "neutral" }) => {
   const { status, setStatus } = useStatus()
 
   const {
@@ -98,7 +101,7 @@ const ContactUsForm: Component<Props> = () => {
           type="submit"
           isLoading={status.isLoading}
           loadingText="Submitting"
-          themeMode="happy"
+          themeMode={themeMode}
         />
       </form>
       <ToastContainer />
