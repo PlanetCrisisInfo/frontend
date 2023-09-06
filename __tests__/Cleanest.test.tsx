@@ -1,5 +1,6 @@
+import SecondaryBar from "@/app/_components/SecondaryBar/SecondaryBar"
 import Cleanest from "@/app/cleanest/page"
-import { render,screen } from "@testing-library/react"
+import { getByTestId, render,screen } from "@testing-library/react"
 
 
 describe("Cleanest Page", () => {
@@ -10,5 +11,9 @@ describe("Cleanest Page", () => {
         expect(heading).toBeInTheDocument()
       })
 
-   
+      it('renders with happy as default', () => {
+       render(<Cleanest  />) 
+       const main =screen.get
+        expect(getByTestId).toHaveStyle(' bg-emerald-600');
+    })
 })
