@@ -10,7 +10,7 @@ describe("Cleanest Page", () => {
         const heading = screen.getByText(/Cleanest/i)
         expect(heading).toBeInTheDocument()
       })
-
+    //   do it on class name 
       it('renders with happy as default', () => {
        render(<Cleanest  />) 
        const main =screen.get
