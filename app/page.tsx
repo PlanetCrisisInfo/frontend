@@ -1,8 +1,11 @@
 import Button from "@/app/_components/Button/Button"
 
+
 import SecondaryBar from "./_components/SecondaryBar/SecondaryBar"
 
 import type { ThemeMode } from "@/types"
+import HomeCard from "./_components/HomeCard/Homecard"
+import WorldCard from "./_components/WorldCard/WorldCard"
 const HomePage = function () {
   const themeMode: ThemeMode = "neutral"
 
@@ -21,6 +24,19 @@ const HomePage = function () {
           </h1>
           <hr />
           <Button text="Button" themeMode={themeMode} />
+          <section>
+        <div className="container px-6 m-auto">
+          <div className="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
+            <div className="col-span-4 lg:col-span-6"> <HomeCard themeMode={themeMode}  /></div>
+            <div className="col-span-4 lg:col-span-6"> <HomeCard themeMode={themeMode}  /></div>
+            <div className="col-span-4 lg:col-span-6"> <HomeCard themeMode={themeMode}  /></div>
+            <div className="col-span-4 lg:col-span-6"> <HomeCard themeMode={themeMode}  /></div>
+            <div className="col-span-4 lg:col-span-6"> <WorldCard themeMode={themeMode}  /></div>
+            <div className="col-span-4 lg:col-span-6"> <HomeCard themeMode={themeMode}  /></div>
+          </div>
+        </div>
+      </section>
+
         </section>
       </main>
     </>
