@@ -40,7 +40,7 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
             >
               <div className="max-w-[75px]  ">
                 <Image
-                  src="/images/planet-crisis-logo.png"
+                  src="/images/planet-crisisLogo.png"
                   alt="Planet Crisis Logo"
                   width={174}
                   height={131}
