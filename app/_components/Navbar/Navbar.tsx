@@ -134,6 +134,19 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     <span>Extinct</span>
                   </Link>
                 </li>
+                <li role="none" className="flex items-stretch">
+                  <Link
+                    role="menuitem"
+                    aria-haspopup="false"
+                    tabIndex={0}
+                    className={`${themeMode} link ${clsx({
+                      "link-active": pathname === "/Blog",
+                    })} `}
+                    href="/blog"
+                  >
+                    <span>Blog</span>
+                  </Link>
+                </li>
                 {/* <li role="none" className="flex items-stretch">
                   <Link
                     role="menuitem"
