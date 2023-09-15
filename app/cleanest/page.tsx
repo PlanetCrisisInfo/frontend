@@ -1,4 +1,5 @@
 import type { ThemeMode } from "@/types"
+import Button from "../_components/Button/Button"
 import SecondaryBar from "../_components/SecondaryBar/SecondaryBar"
 
 export default function CleanestPage() {
@@ -19,6 +20,7 @@ export default function CleanestPage() {
         <section id="contact-us-form" className={`${themeMode} bg`}>
           <article className="container mx-auto">
             <h3>Testing</h3>
+            <Button text="Button" themeMode={themeMode} />
           </article>
         </section>
       </main>

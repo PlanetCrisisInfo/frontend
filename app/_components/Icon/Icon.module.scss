@@ -1,0 +1,54 @@
+.smooth-animate {
+  &.happy {
+    fill: var(--svgHappy);
+  }
+  &.neutral {
+    fill: var(--svgNeutral);
+  }
+  &.sad {
+    fill: var(--svgSad);
+  }
+}
+
+.smooth-animate:hover {
+  &.happy {
+    animation: fillChangeHappy 0.3s ease;
+    fill: var(--svgHappyHover);
+  }
+  &.neutral {
+    animation: fillChangeNeutral 0.3s ease;
+    fill: var(--svgNeutralHover);
+  }
+  &.sad {
+    animation: fillChangeSad 0.3s ease;
+    fill: var(--svgSadHover);
+  }
+}
+
+@keyframes fillChangeHappy {
+  0% {
+    fill: var(--svgHappy);
+  }
+  100% {
+    fill: var(--svgHappyHover);
+  }
+}
+
+@keyframes fillChangeNeutral {
+  0% {
+    fill: var(--svgNeutral);
+  }
+  100% {
+    fill: var(--svgNeutralHover);
+  }
+}
+
+@keyframes fillChangeSad {
+  0% {
+    fill: var(--svgSad);
+  }
+
+  100% {
+    fill: var(--svgSadHover);
+  }
+}

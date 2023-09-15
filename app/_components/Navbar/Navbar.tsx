@@ -15,12 +15,8 @@ type Props = {
 
 const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
   const pathname = usePathname()
-
-  console.log(pathname)
-
   return (
     <>
-      {/*<!-- Component: Basic Navbar --> */}
       <header
         className={`border-b-1 relative z-20 w-full border-b border-slate-200  shadow-lg shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden`}
       >
@@ -30,7 +26,6 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
             className="flex h-[3.8rem] items-stretch justify-between font-medium text-slate-700"
             role="navigation"
           >
-            {/*      <!-- Brand logo --> */}
             <Link
               id="WindUI"
               aria-label="WindUI logo"
@@ -160,17 +155,6 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     <span>Members</span>
                   </Link>
                 </li>
-                {/* <li role="none" className="flex items-stretch">
-                  <Link
-                    role="menuitem"
-                    aria-haspopup="false"
-                    tabIndex={0}
-                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                    href="/contactus"
-                  >
-                    <span>ContactUs</span>
-                  </Link>
-                </li> */}
               </NavigationLinks>
             </NavbarContextProvider>
           </nav>
