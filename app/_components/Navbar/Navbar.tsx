@@ -58,6 +58,7 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     className={`${themeMode} link ${clsx({
                       "link-active": pathname === "/",
                     })} `}
+                    style={{ textDecoration: "none" }}
                     href="/"
                   >
                     <span>Home</span>
@@ -69,9 +70,10 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     aria-current="page"
                     aria-haspopup="false"
                     tabIndex={0}
-                    className={`${themeMode} link ${clsx({
+                    className={`link ${themeMode} ${clsx({
                       "link-active": pathname === "/cleanest",
                     })} `}
+                    style={{ textDecoration: "none" }}
                     href="/cleanest"
                   >
                     <span>Cleanest</span>
@@ -85,6 +87,7 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     className={`${themeMode} link ${clsx({
                       "link-active": pathname === "/pollution",
                     })} `}
+                    style={{ textDecoration: "none" }}
                     href="/pollution"
                   >
                     <span>Pollution</span>
@@ -98,6 +101,7 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     className={`${themeMode} link ${clsx({
                       "link-active": pathname === "/disasters",
                     })} `}
+                    style={{ textDecoration: "none" }}
                     href="/disasters"
                   >
                     <span>Disasters</span>
@@ -111,6 +115,7 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     className={`${themeMode} link ${clsx({
                       "link-active": pathname === "/temperatures",
                     })} `}
+                    style={{ textDecoration: "none" }}
                     href="/temperatures"
                   >
                     <span>Temperatures</span>
@@ -122,37 +127,12 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     aria-haspopup="false"
                     tabIndex={0}
                     className={`${themeMode} link ${clsx({
-                      "link-active": pathname === "/Extinct",
+                      "link-active": pathname === "/temperatures",
                     })} `}
+                    style={{ textDecoration: "none" }}
                     href="/extinct"
                   >
                     <span>Extinct</span>
-                  </Link>
-                </li>
-                <li role="none" className="flex items-stretch">
-                  <Link
-                    role="menuitem"
-                    aria-haspopup="false"
-                    tabIndex={0}
-                    className={`${themeMode} link ${clsx({
-                      "link-active": pathname === "/Blog",
-                    })} `}
-                    href="/blog"
-                  >
-                    <span>Blog</span>
-                  </Link>
-                </li>
-                <li role="none" className="flex items-stretch">
-                  <Link
-                    role="menuitem"
-                    aria-haspopup="false"
-                    tabIndex={0}
-                    className={`${themeMode} link ${clsx({
-                      "link-active": pathname === "/Members",
-                    })} `}
-                    href="/members"
-                  >
-                    <span>Members</span>
                   </Link>
                 </li>
               </NavigationLinks>

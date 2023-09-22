@@ -6,7 +6,7 @@ import WorldCard from "./_components/WorldCard/WorldCard"
 
 import type { ThemeMode } from "@/types"
 const HomePage = function () {
-  const themeMode: ThemeMode = "happy"
+  const themeMode: ThemeMode = "neutral"
 
   return (
     <>
