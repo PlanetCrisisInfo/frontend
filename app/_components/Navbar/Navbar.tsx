@@ -15,12 +15,8 @@ type Props = {
 
 const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
   const pathname = usePathname()
-
-  console.log(pathname)
-
   return (
     <>
-      {/*<!-- Component: Basic Navbar --> */}
       <header
         className={`border-b-1 relative z-20 w-full border-b border-slate-200  shadow-lg shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden`}
       >
@@ -30,7 +26,6 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
             className="flex h-[3.8rem] items-stretch justify-between font-medium text-slate-700"
             role="navigation"
           >
-            {/*      <!-- Brand logo --> */}
             <Link
               id="WindUI"
               aria-label="WindUI logo"
@@ -63,6 +58,7 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     className={`${themeMode} link ${clsx({
                       "link-active": pathname === "/",
                     })} `}
+                    style={{ textDecoration: "none" }}
                     href="/"
                   >
                     <span>Home</span>
@@ -74,9 +70,10 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     aria-current="page"
                     aria-haspopup="false"
                     tabIndex={0}
-                    className={`${themeMode} link ${clsx({
+                    className={`link ${themeMode} ${clsx({
                       "link-active": pathname === "/cleanest",
                     })} `}
+                    style={{ textDecoration: "none" }}
                     href="/cleanest"
                   >
                     <span>Cleanest</span>
@@ -90,6 +87,7 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     className={`${themeMode} link ${clsx({
                       "link-active": pathname === "/pollution",
                     })} `}
+                    style={{ textDecoration: "none" }}
                     href="/pollution"
                   >
                     <span>Pollution</span>
@@ -103,6 +101,7 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     className={`${themeMode} link ${clsx({
                       "link-active": pathname === "/disasters",
                     })} `}
+                    style={{ textDecoration: "none" }}
                     href="/disasters"
                   >
                     <span>Disasters</span>
@@ -116,6 +115,7 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     className={`${themeMode} link ${clsx({
                       "link-active": pathname === "/temperatures",
                     })} `}
+                    style={{ textDecoration: "none" }}
                     href="/temperatures"
                   >
                     <span>Temperatures</span>
@@ -127,24 +127,14 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                     aria-haspopup="false"
                     tabIndex={0}
                     className={`${themeMode} link ${clsx({
-                      "link-active": pathname === "/Extinct",
+                      "link-active": pathname === "/temperatures",
                     })} `}
+                    style={{ textDecoration: "none" }}
                     href="/extinct"
                   >
                     <span>Extinct</span>
                   </Link>
                 </li>
-                {/* <li role="none" className="flex items-stretch">
-                  <Link
-                    role="menuitem"
-                    aria-haspopup="false"
-                    tabIndex={0}
-                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                    href="/contactus"
-                  >
-                    <span>ContactUs</span>
-                  </Link>
-                </li> */}
               </NavigationLinks>
             </NavbarContextProvider>
           </nav>

@@ -3,6 +3,25 @@
 @tailwind utilities;
 @import url("react-toastify/dist/ReactToastify.css");
 @layer base {
+  :root {
+    --svgHappy: #5b45b6;
+    --svgHappyHover: #795fe3;
+    --svgSad: #c38c00;
+    --svgSadHover: #ffd438;
+    --svgNeutral: #10b981;
+    --svgNeutralHover: #36bbf2;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+
+  body {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-family: "Roboto", sans-serif;
+  }
+
   button {
     padding: 0.9375rem 2rem;
     border-radius: 0.625rem;
@@ -27,7 +46,7 @@
     }
 
     &.link {
-      @apply first-line:flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8;
+      @apply text-yellow-600 first-line:flex items-center gap-2 py-4 transition-colors duration-300 hover:text-yellow-500  focus:outline-none focus-visible:outline-none lg:px-8 underline;
     }
 
     &.link-active {
@@ -44,11 +63,11 @@
     }
 
     &.btn {
-      @apply bg-slate-200  text-slate-700 hover:bg-slate-100;
+      @apply bg-violet-700  text-slate-100 hover:bg-violet-500;
     }
 
     &.link {
-      @apply first-line:flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8;
+      @apply text-violet-700 first-line:flex items-center gap-2 py-4 transition-colors duration-300 hover:text-violet-600  focus:outline-none focus-visible:outline-none lg:px-8 underline;
     }
 
     &.link-active {
@@ -69,7 +88,7 @@
     }
 
     &.link {
-      @apply first-line:flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8;
+      @apply text-sky-500 first-line:flex items-center gap-2 py-4 transition-colors duration-300 hover:text-sky-400  focus:outline-none focus-visible:outline-none lg:px-8 underline underline-offset-8;
     }
 
     &.link-active {
@@ -79,36 +98,5 @@
     &.secondary-link {
       @apply py-3 hover:text-emerald-500;
     }
-  }
-}
-//TODO: animation sample;
-
-.hoverable-svg {
-  fill: red;
-}
-
-.hoverable-svg:hover {
-  animation: rotateAndScale 2s linear, fillChange 0.3s ease;
-  fill: blue;
-}
-
-@keyframes rotateAndScale {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(1.1);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-
-@keyframes fillChange {
-  0% {
-    fill: red;
-  }
-  100% {
-    fill: blue;
   }
 }
