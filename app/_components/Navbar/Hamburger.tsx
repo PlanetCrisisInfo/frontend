@@ -1,15 +1,13 @@
 "use client"
-import { useContext } from "react"
-
-import { NavbarContext } from "./NavbarContextProvider"
 
 import type { Component } from "@/types"
 
-type Props = {}
+type Props = {
+  isToggleOpen
+  setIsToggleOpen
+}
 
-const Hamburger: Component<Props> = () => {
-  const { isToggleOpen, setIsToggleOpen } = useContext(NavbarContext)
-
+const Hamburger: Component<Props> = ({ isToggleOpen, setIsToggleOpen }) => {
   return (
     <button
       className={`relative order-10 block h-10 w-10 self-center lg:hidden

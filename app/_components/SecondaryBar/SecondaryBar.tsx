@@ -31,32 +31,27 @@ const SecondaryBar: Component<Props> = ({
       id="secondaryBar"
       className={`flex justify-between ${themeMode} bg px-4`}
     >
-      <div className="container mx-auto flex">
-        <li role="none" className="flex items-stretch">
-          <Link
-            role="menuitem"
-            aria-haspopup="false"
-            tabIndex={0}
-            className={`${themeMode} link`}
-            style={{ textDecoration: "none" }}
-            href="/blog"
-          >
-            <span>Blog</span>
-          </Link>
-        </li>
-        <li role="none" className="flex items-stretch">
-          <Link
-            role="menuitem"
-            aria-haspopup="false"
-            tabIndex={0}
-            className={`${themeMode} link`}
-            style={{ textDecoration: "none" }}
-            href="/members"
-          >
-            <span>Members</span>
-          </Link>
-        </li>
-      </div>
+      <ul className="container mx-auto flex">
+        {pagesLinks.length > 0 &&
+          pagesLinks.map((pageLink, idx) => (
+            <li
+              role="none"
+              className="flex items-stretch"
+              key={`${pageLink}-${idx}`}
+            >
+              <Link
+                role="menuitem"
+                aria-haspopup="false"
+                tabIndex={0}
+                className={`${themeMode} link`}
+                style={{ textDecoration: "none" }}
+                href={pageLink.path}
+              >
+                <span>{pageLink.name}</span>
+              </Link>
+            </li>
+          ))}
+      </ul>
     </nav>
   )
 }

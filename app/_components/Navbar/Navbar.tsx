@@ -3,10 +3,11 @@ import { clsx } from "clsx"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useState } from "react"
 
+import DesktopNav from "./DesktopNav"
 import Hamburger from "./Hamburger"
-import NavbarContextProvider from "./NavbarContextProvider"
-import NavigationLinks from "./NavigationLinks"
+import NavAccordion from "./MobileNavBar"
 
 import type { Component, ThemeMode } from "@/types"
 type Props = {
@@ -15,12 +16,17 @@ type Props = {
 
 const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
   const pathname = usePathname()
+
+  const [isToggleOpen, setIsToggleOpen] = useState<boolean>(false)
+
   return (
     <>
       <header
         className={`border-b-1 relative z-20 w-full border-b border-slate-200  shadow-lg shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden`}
       >
-        <div className="relative container mx-auto">
+        <div
+          className={`relative mx-auto ${clsx({ container: !isToggleOpen })}`}
+        >
           <nav
             aria-label="main navigation"
             className="flex h-[3.8rem] items-stretch justify-between font-medium text-slate-700"
@@ -30,7 +36,7 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
               id="WindUI"
               aria-label="WindUI logo"
               aria-current="page"
-              className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
+              className="flex items-center gap-2 whitespace-nowrap pt-1 pb-1 ml-1 text-lg focus:outline-none lg:flex-1 "
               href="/"
             >
               <div className="max-w-[75px]  ">
@@ -45,98 +51,32 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
                 />
               </div>
             </Link>
-            <NavbarContextProvider>
-              {/*      <!-- Mobile trigger --> */}
-              <Hamburger />
-              {/*      <!-- Navigation links --> */}
-              <NavigationLinks>
-                <li role="none" className="flex items-stretch">
-                  <Link
-                    role="menuitem"
-                    aria-haspopup="false"
-                    tabIndex={0}
-                    className={`${themeMode} link ${clsx({
-                      "link-active": pathname === "/",
-                    })} `}
-                    style={{ textDecoration: "none" }}
-                    href="/"
-                  >
-                    <span>Home</span>
-                  </Link>
-                </li>
-                <li role="none" className="flex items-stretch">
-                  <Link
-                    role="menuitem"
-                    aria-current="page"
-                    aria-haspopup="false"
-                    tabIndex={0}
-                    className={`link ${themeMode} ${clsx({
-                      "link-active": pathname === "/cleanest",
-                    })} `}
-                    style={{ textDecoration: "none" }}
-                    href="/cleanest"
-                  >
-                    <span>Cleanest</span>
-                  </Link>
-                </li>
-                <li role="none" className="flex items-stretch">
-                  <Link
-                    role="menuitem"
-                    aria-haspopup="false"
-                    tabIndex={0}
-                    className={`${themeMode} link ${clsx({
-                      "link-active": pathname === "/pollution",
-                    })} `}
-                    style={{ textDecoration: "none" }}
-                    href="/pollution"
-                  >
-                    <span>Pollution</span>
-                  </Link>
-                </li>
-                <li role="none" className="flex items-stretch">
-                  <Link
-                    role="menuitem"
-                    aria-haspopup="false"
-                    tabIndex={0}
-                    className={`${themeMode} link ${clsx({
-                      "link-active": pathname === "/disasters",
-                    })} `}
-                    style={{ textDecoration: "none" }}
-                    href="/disasters"
-                  >
-                    <span>Disasters</span>
-                  </Link>
-                </li>
-                <li role="none" className="flex items-stretch">
-                  <Link
-                    role="menuitem"
-                    aria-haspopup="false"
-                    tabIndex={0}
-                    className={`${themeMode} link ${clsx({
-                      "link-active": pathname === "/temperatures",
-                    })} `}
-                    style={{ textDecoration: "none" }}
-                    href="/temperatures"
-                  >
-                    <span>Temperatures</span>
-                  </Link>
-                </li>
-                <li role="none" className="flex items-stretch">
-                  <Link
-                    role="menuitem"
-                    aria-haspopup="false"
-                    tabIndex={0}
-                    className={`${themeMode} link ${clsx({
-                      "link-active": pathname === "/temperatures",
-                    })} `}
-                    style={{ textDecoration: "none" }}
-                    href="/extinct"
-                  >
-                    <span>Extinct</span>
-                  </Link>
-                </li>
-              </NavigationLinks>
-            </NavbarContextProvider>
+
+            {/*      <!-- Mobile trigger --> */}
+            <Hamburger
+              isToggleOpen={isToggleOpen}
+              setIsToggleOpen={setIsToggleOpen}
+            />
+            {/*      <!-- Navigation links --> */}
+            <ul
+              role="menubar"
+              aria-label="Select page"
+              className={`absolute top-0 left-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain bg-white/90 px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
+                isToggleOpen
+                  ? "visible opacity-100 backdrop-blur-sm min-h-screen"
+                  : "invisible opacity-0"
+              }`}
+            >
+              {!isToggleOpen && (
+                <DesktopNav
+                  themeMode={themeMode}
+                  pathname={pathname}
+                  setIsToggleOpen={setIsToggleOpen}
+                />
+              )}
+
+              {isToggleOpen && <NavAccordion />}
+            </ul>
           </nav>
         </div>
       </header>
