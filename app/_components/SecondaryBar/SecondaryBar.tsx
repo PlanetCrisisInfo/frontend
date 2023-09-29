@@ -29,7 +29,7 @@ const SecondaryBar: Component<Props> = ({
   return (
     <nav
       id="secondaryBar"
-      className={`flex justify-between ${themeMode} bg px-4`}
+      className={`hidden flex justify-between ${themeMode} bg px-4 lg:block`}
     >
       <ul className="container mx-auto flex">
         {pagesLinks.length > 0 &&

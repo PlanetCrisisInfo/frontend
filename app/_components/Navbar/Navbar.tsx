@@ -1,5 +1,4 @@
 "use client"
-import { clsx } from "clsx"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -24,9 +23,7 @@ const Navbar: Component<Props> = ({ themeMode = "neutral" }) => {
       <header
         className={`border-b-1 relative z-20 w-full border-b border-slate-200  shadow-lg shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden`}
       >
-        <div
-          className={`relative mx-auto ${clsx({ container: !isToggleOpen })}`}
-        >
+        <div className="relative mx-auto">
           <nav
             aria-label="main navigation"
             className="flex h-[3.8rem] items-stretch justify-between font-medium text-slate-700"
