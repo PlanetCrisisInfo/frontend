@@ -38,7 +38,11 @@ return(
       fill
   />
   <div className="flex flex-col justify-center items-center px-3">
-      <h1 className=" text-center text-3xl md:text-5xl text-white font-bold drop-shadow-lg">Planet crisis
+      <h1 className=" text-center text-3xl md:text-5xl text-white font-bold drop-shadow-lg">
+      <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+              Planet
+            </span>{" "}
+            Crisis
           
       </h1>
       {/* <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
