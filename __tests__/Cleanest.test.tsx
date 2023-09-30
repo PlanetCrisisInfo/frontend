@@ -12,8 +12,7 @@ describe("Cleanest Page", () => {
       })
     //   do it on class name 
       it('renders with happy as default', () => {
-       render(<Cleanest  />) 
-       const main =screen.get
-        expect(getByTestId).toHaveStyle(' bg-emerald-600');
+       render(<Cleanest thememode={thememode}  />) 
+       const {thememode}
     })
 })
