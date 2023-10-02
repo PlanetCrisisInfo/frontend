@@ -18,3 +18,4 @@ export const pagesLinksCleanest = [
     path: `/cleanest-country-award-${currentYear}`,
   },
 ]
+

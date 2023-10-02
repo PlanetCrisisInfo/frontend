@@ -13,6 +13,26 @@ const NavAccordion = () => {
         },
       ],
     },
+    {
+      parentLinkName:"extint",
+      childLinks:[  
+        {
+          name:"",
+          path:"",
+        
+      },
+      {
+        name:"",
+        path:"",
+      
+    },
+    {
+      name:"",
+      path:"",
+    
+  }
+      ]
+    }
   ]
   return (
     <>
