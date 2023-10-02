@@ -18,7 +18,7 @@ return(
 
   <div className="relative  h-screen overflow-hidden">
   <div className="absolute inset-0">
-    <Image src="/images/hero.jpg" alt="Background Image" className="object-cover object-center w-full h-full" layout="fill"/>
+    <Image src="/images/hero.jpg" alt="Background Image" className="object-cover object-center w-full h-full" layout="fill" loading="lazy"/>
     <div className="absolute inset-0 bg-black opacity-50"></div>
   </div>
   
