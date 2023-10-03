@@ -34,7 +34,9 @@ const NavAccordion = () => {
       ]
     }
   ]
+  console.log(mobileNavLinks)
   return (
+    
     <>
       <li className="w-full divide-y divide-slate-200  ">
         <details className="group p-1" open>
