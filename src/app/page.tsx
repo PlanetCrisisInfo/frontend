@@ -2,7 +2,7 @@ export default function Home() {
   const theme = "sad"
   return (
     <main>
-      <div className="sad bg">
+      <section className="sad bg">
         <h1 className="text-4xl font-bold">Planet Crisis</h1>
         <p>
           Join Planet Crisis in our journey to save our beautiful Earth!
@@ -12,8 +12,8 @@ export default function Home() {
           together for a happier, healthier planet!
         </p>
         <button className="sad link">Sad Link</button>
-      </div>
-      <div className="happy bg">
+      </section>
+      <section className="happy bg">
         <h1 className="text-4xl font-bold">Planet Crisis</h1>
         <p>
           Join Planet Crisis in our journey to save our beautiful Earth!
@@ -23,8 +23,8 @@ export default function Home() {
           together for a happier, healthier planet!
         </p>
         <button className="happy link">Sad Link</button>
-      </div>
-      <div className="neutral bg">
+      </section>
+      <section className="neutral bg">
         <h1 className="text-4xl font-bold">Planet Crisis</h1>
         <p>
           Join Planet Crisis in our journey to save our beautiful Earth!
@@ -34,7 +34,7 @@ export default function Home() {
           together for a happier, healthier planet!
         </p>
         <button className="neutral link">Sad Link</button>
-      </div>
+      </section>
     </main>
   )
 }
