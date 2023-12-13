@@ -1,9 +1,18 @@
 import type { Metadata } from "next"
 import "./globals.scss"
 
-import { Inter } from "next/font/google"
+import { Archivo, Hanken_Grotesk } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] })
+const HankenGrotesk = Hanken_Grotesk({
+  subsets: ["latin-ext"],
+  weight: ["300", "500", "600", "800"],
+  display: "swap",
+})
+const ArchivoFont = Archivo({
+  subsets: ["latin-ext"],
+  weight: ["300", "600", "800"],
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Planet Crisis",
@@ -18,7 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${HankenGrotesk.className} ${ArchivoFont.className}`}>
+        {children}
+      </body>
     </html>
   )
 }

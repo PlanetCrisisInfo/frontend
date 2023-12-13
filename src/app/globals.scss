@@ -1,9 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import url("react-toastify/dist/ReactToastify.css");
 
 @layer base {
@@ -18,12 +15,13 @@
 
   body {
     font-size: clamp(0.875rem, 2vw, 1rem);
-    font-family: "Roboto", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 400;
   }
 
   :is(h1, h2, h3, h4, h5, h6) {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
   }
 
   a {
