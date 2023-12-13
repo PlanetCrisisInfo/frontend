@@ -3,7 +3,8 @@ export default function Home() {
   return (
     <main>
       <section className="sad bg">
-        <h1 className="text-4xl font-bold">Planet Crisis</h1>
+        <h1>Planet Crisis</h1>
+        <h2>Second Heading</h2>
         <p>
           Join Planet Crisis in our journey to save our beautiful Earth!
           Discover easy tips, fun facts, and inspiring stories about fighting
@@ -14,7 +15,7 @@ export default function Home() {
         <button className="sad link">Sad Link</button>
       </section>
       <section className="happy bg">
-        <h1 className="text-4xl font-bold">Planet Crisis</h1>
+        <h1>Planet Crisis</h1>
         <p>
           Join Planet Crisis in our journey to save our beautiful Earth!
           Discover easy tips, fun facts, and inspiring stories about fighting
@@ -25,7 +26,7 @@ export default function Home() {
         <button className="happy link">Sad Link</button>
       </section>
       <section className="neutral bg">
-        <h1 className="text-4xl font-bold">Planet Crisis</h1>
+        <h1>Planet Crisis</h1>
         <p>
           Join Planet Crisis in our journey to save our beautiful Earth!
           Discover easy tips, fun facts, and inspiring stories about fighting
