@@ -7,7 +7,7 @@ interface IHeaderComponentProps {}
 
 const Hero = () => {
   return (
-    <header className="min-h-[90vh] gradient bg relative">
+    <header className="min-h-[90vh] gradient bg relative overflow-hidden">
       <div className="w-[478px] absolute inset-0 z-0 object-contain -top-6 -left-40">
         <Image
           src={backEllipse}
