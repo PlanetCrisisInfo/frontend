@@ -7,7 +7,16 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-hanken)"],
+      },
+      fontWeight: {
+        thin: "100",
+        normal: "300",
+        bold: "600",
+      },
+    },
   },
   plugins: [],
 }

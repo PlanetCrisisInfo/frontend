@@ -4,13 +4,15 @@ import "./globals.scss"
 import { Archivo, Hanken_Grotesk } from "next/font/google"
 
 const HankenGrotesk = Hanken_Grotesk({
-  subsets: ["latin-ext"],
-  weight: ["300", "500", "600", "800"],
+  subsets: ["latin"],
+  weight: ["100", "300", "600"],
+  variable: "--font-hanken",
   display: "swap",
 })
 const ArchivoFont = Archivo({
-  subsets: ["latin-ext"],
-  weight: ["300", "600", "800"],
+  subsets: ["latin"],
+  weight: ["100", "300", "600"],
+  variable: "--font-archivo",
   display: "swap",
 })
 
@@ -27,7 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${HankenGrotesk.className} ${ArchivoFont.className}`}>
+      <body
+        className={`${HankenGrotesk.variable} font-sans ${ArchivoFont.className} font-sans`}
+      >
         {children}
       </body>
     </html>

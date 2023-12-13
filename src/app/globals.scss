@@ -11,17 +11,17 @@
     --svgSadHover: #ffd438;
     --svgNeutral: #10b981;
     --svgNeutralHover: #36bbf2;
+    --font-hanken: "Hanken Grotesk", sans-serif;
+    --font-archivo: "Archivo", sans-serif;
   }
 
-  body {
-    font-size: clamp(0.875rem, 2vw, 1rem);
-    font-family: "Hanken Grotesk", sans-serif;
-    font-weight: 400;
+  html {
+    font-family: var(--font-hanken);
+    font-weight: normal;
   }
 
   :is(h1, h2, h3, h4, h5, h6) {
-    font-family: "Archivo", sans-serif;
-    font-weight: 600;
+    font-family: var(--font-archivo);
   }
 
   a {
