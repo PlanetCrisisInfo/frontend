@@ -59,6 +59,12 @@
 }
 
 @layer utilities {
+  .gradient {
+    &.bg {
+      @apply bg-gradient-to-r from-purple-800 to-purple-400;
+    }
+  }
+
   .sad {
     &.bg {
       @apply bg-rose-900 text-slate-100;
