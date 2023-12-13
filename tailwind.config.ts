@@ -20,7 +20,7 @@ const config: Config = {
         padding: {
           "DEFAULT": "0.5rem",
           "sm": "0.5rem",
-          "lg": "0rem",
+          "lg": "0.5rem",
           "xl": "0rem",
           "2xl": "0rem",
           "3xl": "0rem",
