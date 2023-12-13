@@ -2,7 +2,9 @@ export default function HomePage() {
   const theme = "sad"
   return (
     <main>
-      <h1>Hero Section</h1>
+      <header className="min-h-[80vh] gradient bg">
+        <h1>Hero Section</h1>
+      </header>
     </main>
   )
 }
