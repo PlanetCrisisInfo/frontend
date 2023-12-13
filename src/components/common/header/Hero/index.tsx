@@ -8,7 +8,7 @@ interface IHeaderComponentProps {}
 const Hero = () => {
   return (
     <header className="min-h-[90vh] gradient bg relative">
-      <div className="w-[723px] absolute inset-0 z-0 object-contain -top-10 -left-40">
+      <div className="w-[478px] absolute inset-0 z-0 object-contain -top-6 -left-40">
         <Image
           src={backEllipse}
           alt="back ellipse illustration"
@@ -17,7 +17,7 @@ const Hero = () => {
           className=""
         />
       </div>
-      <div className="w-[523px]   absolute inset-0 z-0 object-contain -top-32 left-28 -rotate-12">
+      <div className="w-[318px] absolute inset-0 z-0 object-contain -top-16 left-14 -rotate-12">
         <Image
           src={frontEllipse}
           alt="front ellipse illustration"
