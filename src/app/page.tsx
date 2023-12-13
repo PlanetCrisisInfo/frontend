@@ -1,10 +1,11 @@
+import imageSrc from "@/../public/images/circle.svg"
+import Hero from "@/components/common/header/Hero"
+
 export default function HomePage() {
   const theme = "sad"
   return (
     <main>
-      <header className="min-h-[80vh] gradient bg">
-        <h1>Hero Section</h1>
-      </header>
+      <Hero imageSrc={imageSrc} alt="circle illustration" />
     </main>
   )
 }
