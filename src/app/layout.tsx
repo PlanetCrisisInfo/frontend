@@ -1,21 +1,6 @@
 import type { Metadata } from "next"
 import "./globals.scss"
 
-import { Archivo, Hanken_Grotesk } from "next/font/google"
-
-const HankenGrotesk = Hanken_Grotesk({
-  subsets: ["latin"],
-  weight: ["100", "300", "600"],
-  variable: "--font-hanken",
-  display: "swap",
-})
-const ArchivoFont = Archivo({
-  subsets: ["latin"],
-  weight: ["100", "300", "600"],
-  variable: "--font-archivo",
-  display: "swap",
-})
-
 export const metadata: Metadata = {
   title: "Planet Crisis",
   description:
@@ -29,11 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${HankenGrotesk.variable} font-sans ${ArchivoFont.className} font-sans`}
-      >
-        {children}
-      </body>
+      <body className="">{children}</body>
     </html>
   )
 }

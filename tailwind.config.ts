@@ -9,12 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-hanken)"],
-      },
-      fontWeight: {
-        thin: "100",
-        normal: "300",
-        bold: "600",
+        sans: ["Georgia", "Times New Roman", "serif"],
       },
     },
   },
