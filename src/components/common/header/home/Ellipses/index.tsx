@@ -5,8 +5,8 @@ import frontEllipse from "@/../public/images/front-ellipse.svg"
 
 const Ellipses = () => {
   return (
-    <div>
-      <div className="w-[478px] absolute inset-0 z-0 object-contain -top-[24px] -left-[160px]">
+    <>
+      <div className="w-[478px] absolute inset-0 z-0 object-contain -top-[24px] -left-[110px]">
         <Image
           src={backEllipse}
           alt="back ellipse illustration"
@@ -15,7 +15,7 @@ const Ellipses = () => {
           className=""
         />
       </div>
-      <div className="w-[318px] absolute inset-0 z-0 object-contain -top-[60px] -left-[14px] -rotate-12">
+      <div className="w-[318px] absolute inset-0 z-0 object-contain -top-[60px] left-[110px] -rotate-[7deg]">
         <Image
           src={frontEllipse}
           alt="front ellipse illustration"
@@ -23,7 +23,7 @@ const Ellipses = () => {
           placeholder="empty"
         />
       </div>
-    </div>
+    </>
   )
 }
 
