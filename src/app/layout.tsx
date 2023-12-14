@@ -1,6 +1,10 @@
 import type { Metadata } from "next"
 import "./globals.scss"
 
+import { headers } from "next/headers"
+
+import Navbar from "@/components/common/header/Navbar"
+
 export const metadata: Metadata = {
   title: "Planet Crisis",
   description:
@@ -12,9 +16,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const headersList = headers()
+  // read the custom x-url header
+  const header_url = headersList.get("x-url") || ""
+  console.log("header_url", header_url)
+  console.log(process.env.NODE_ENV)
+
   return (
     <html lang="en">
-      <body className="">{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
