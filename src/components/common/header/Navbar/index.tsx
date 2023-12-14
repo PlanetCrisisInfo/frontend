@@ -1,6 +1,13 @@
-const Navbar = () => {
+import { FC } from "react"
+
+interface INavbarComponentProps {
+  pathname: string
+}
+const Navbar: FC<INavbarComponentProps> = ({
+  pathname,
+}: INavbarComponentProps) => {
   return (
-    <nav className="gradient bg">
+    <nav className={`${pathname === "/" ? "gradient bg" : ""}`}>
       <ul className="container flex relative z-20 ">
         <li>Home</li>
         <li>About</li>

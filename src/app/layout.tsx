@@ -4,6 +4,7 @@ import "./globals.scss"
 import { headers } from "next/headers"
 
 import Navbar from "@/components/common/header/Navbar"
+import { extractPathname } from "@/utils/extractpathname"
 
 export const metadata: Metadata = {
   title: "Planet Crisis",
@@ -19,13 +20,13 @@ export default function RootLayout({
   const headersList = headers()
   // read the custom x-url header
   const header_url = headersList.get("x-url") || ""
-  console.log("header_url", header_url)
-  console.log(process.env.NODE_ENV)
+
+  const pathname = extractPathname(header_url)
 
   return (
     <html lang="en">
       <body>
-        <Navbar />
+        <Navbar pathname={pathname} />
         {children}
       </body>
     </html>
