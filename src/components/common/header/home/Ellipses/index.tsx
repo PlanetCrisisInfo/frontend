@@ -1,26 +1,17 @@
 import Image from "next/image"
 
-import backEllipse from "@/../public/images/back-ellipse.svg"
-import frontEllipse from "@/../public/images/front-ellipse.svg"
+import circle from "@/../public/images/circle.svg"
 
 const Ellipses = () => {
   return (
     <>
-      <div className="w-[478px] absolute inset-0 z-0 object-contain -top-[24px] -left-[110px]">
+      <div className="w-[55vw] lg:w-[35vw] absolute inset-0 z-0 object-cover -top-[6%] -left-[10%] lg:-top-[5%] lg:-left-[8%]">
         <Image
-          src={backEllipse}
+          src={circle}
           alt="back ellipse illustration"
           priority={true}
           placeholder="empty"
-          className=""
-        />
-      </div>
-      <div className="w-[318px] absolute inset-0 z-0 object-contain -top-[60px] left-[110px] -rotate-[7deg]">
-        <Image
-          src={frontEllipse}
-          alt="front ellipse illustration"
-          priority={true}
-          placeholder="empty"
+          className="-scale-x-100"
         />
       </div>
     </>
