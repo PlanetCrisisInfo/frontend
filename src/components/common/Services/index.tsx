@@ -1,6 +1,7 @@
 
 
 const Services = ()  =>{
+  return(
     <div className="flex flex-col items-stretch px-5">
       <div className="text-zinc-900 text-center text-5xl font-bold leading-[61.88px] capitalize self-center max-md:max-w-full max-md:text-4xl">
         Best of our service
@@ -153,7 +154,7 @@ const Services = ()  =>{
         </div>
       </div>
     </div>
-  );
+  )
 }
 export default Services
 
