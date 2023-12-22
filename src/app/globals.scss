@@ -20,6 +20,11 @@
     box-sizing: border-box;
   }
 
+  body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
   h1,
   h2,
   h3,
