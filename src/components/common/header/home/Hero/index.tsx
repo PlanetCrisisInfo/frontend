@@ -8,7 +8,7 @@ interface IHeaderComponentProps {}
 
 const Hero = () => {
   return (
-    <div className="">
+    <div className="w-[100vw]">
       <Image
         src={planetSvg}
         alt="planet"
