@@ -9,7 +9,11 @@ interface IHeaderComponentProps {}
 const Hero = () => {
   return (
     <div className="">
-      <Image src={planetSvg} alt="planet" className={styles.planetSvg} />
+      <Image
+        src={planetSvg}
+        alt="planet"
+        className={`-mt-1 ${styles.planetSvg}`}
+      />
       {/* <p className="flex justify-end items-center text-3xl">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
         accusamus perspiciatis ratione dolore quidem quibusdam ducimus quos,
