@@ -8,13 +8,13 @@ const Navbar: FC<INavbarComponentProps> = ({
 }: INavbarComponentProps) => {
   return (
     <nav
-      className={`font-semibold leading-6  ${
+      className={`font-semibold leading-6 ${
         pathname === "/" ? "gradient bg" : ""
       }`}
     >
-      <div className="min-h-[6vh] container flex justify-between items-center pt-8 text-white text-xl relative z-20">
-        <h2>Logo</h2>
-        <ul className="flex min-w-[50vw] justify-between">
+      <div className="min-h-[6vh] container flex justify-between items-center pt-8 text-white text-xl ">
+        <h2 className="min-w-[200px]">Logo</h2>
+        <ul className="flex justify-between">
           <li>Home</li>
           <li>About</li>
           <li>Blog</li>

@@ -1,0 +1,16 @@
+.planetSvg {
+  display: flex;
+  --min-height: 100vh;
+  // border: 2px solid red;
+  background-image: url("/images/planet.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  object-fit: cover;
+  // min-height: var(--min-height);
+  min-height: 100vh;
+  min-width: 100%;
+  position: absolute;
+  bottom: -21vh;
+  z-index: 100;
+}
