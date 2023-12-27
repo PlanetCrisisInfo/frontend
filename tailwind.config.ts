@@ -14,6 +14,7 @@ const config: Config = {
       // Extend the screens with a new custom breakpoint for 1620px
       screens: {
         "3xl": "1620px",
+        "4xl": "1920px",
       },
       container: {
         center: true,

@@ -2,15 +2,16 @@ import Image from "next/image"
 
 import planetSvg from "@/../public/images/planet.svg"
 
-interface IHeaderComponentProps {}
+import styles from "./Hero.module.scss"
 
+interface IHeaderComponentProps {}
 const Hero = () => {
   return (
     <div className="w-[100vw] max-w-[2160px] mx-auto heroHome bg">
       <Image
         src={planetSvg}
         alt="planet"
-        className="-mt-1 min-h-[90vh]"
+        className={`-mt-1 min-h-[90vh] ${styles.planet}`}
         priority={true}
         quality={75}
       />
