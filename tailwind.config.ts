@@ -24,10 +24,12 @@ const config: Config = {
           "xl": "0.5rem",
           "2xl": "0.5rem",
           "3xl": "0rem",
+          "4xl": "0rem",
         },
       },
       maxWidth: {
         "3xl": "1620px",
+        "4xl": "1920px",
       },
     },
   },

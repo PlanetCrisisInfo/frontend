@@ -26,8 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar pathname={pathname} />
-        {children}
+        <div className="mx-auto max-w-[1920px]">
+          <Navbar pathname={pathname} />
+          {children}
+        </div>
       </body>
     </html>
   )
