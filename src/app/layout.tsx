@@ -23,12 +23,16 @@ export default function RootLayout({
 
   const pathname = extractPathname(header_url)
 
+  console.log("pathname", pathname)
+  const theme: Theme = (pathname === "/" && "sad") || "sad"
   return (
     <html lang="en">
       <body>
-        <div className="mx-auto max-w-[1920px]">
-          <Navbar pathname={pathname} />
-          {children}
+        <div className="bg-slate-100">
+          <div className="mx-auto max-w-[2160px]">
+            <Navbar theme={theme} />
+            {children}
+          </div>
         </div>
       </body>
     </html>

@@ -65,19 +65,14 @@
 }
 
 @layer utilities {
-  .gradient {
+  .heroHome {
     &.bg {
-      background-image: linear-gradient(
-        to bottom,
-        rgba(91, 33, 182, 1),
-        rgba(91, 33, 182, 1)
-      );
+      @apply bg-gradient-to-b  from-emerald-500 from-0% via-50% via-[#ffca1a] to-70% to-[#ffca1a00];
     }
   }
-
   .sad {
     &.bg {
-      @apply bg-rose-900 text-slate-100;
+      @apply bg-gradient-to-r  from-rose-500 from-0% via-10% via-rose-700 to-100% to-[#f07510bc] text-slate-100;
     }
 
     &.btn {
@@ -98,7 +93,7 @@
   }
   .happy {
     &.bg {
-      @apply bg-emerald-600 text-slate-100;
+      @apply bg-gradient-to-r  from-emerald-500 from-0% via-10% via-emerald-600 to-100% to-[#ffca1a] text-slate-100;
     }
 
     &.btn {
@@ -119,7 +114,7 @@
   }
   .neutral {
     &.bg {
-      @apply bg-gray-300 text-slate-800;
+      @apply bg-gradient-to-r  from-gray-100 from-0% via-10% via-gray-300 to-100% to-[#e4e4e4] text-slate-800;
     }
 
     &.btn {

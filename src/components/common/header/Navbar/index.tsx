@@ -1,18 +1,14 @@
 import { FC } from "react"
 
 interface INavbarComponentProps {
-  pathname: string
+  theme: string
 }
 const Navbar: FC<INavbarComponentProps> = ({
-  pathname,
+  theme,
 }: INavbarComponentProps) => {
   return (
-    <nav
-      className={`font-semibold leading-6  ${
-        pathname === "/" ? "gradient bg" : ""
-      }`}
-    >
-      <div className="min-h-[8vh]  container flex justify-between items-center text-white text-xl relative z-40 ">
+    <nav className={`font-semibold leading-6 ${theme} bg relative z-50`}>
+      <div className="min-h-[8vh]  container flex justify-between items-center text-xl relative z-40 ">
         <h2 className="min-w-[20%] cursor-pointer">Logo</h2>
         <ul className="flex justify-between min-w-[60%] cursor-pointer">
           <li>Home</li>
