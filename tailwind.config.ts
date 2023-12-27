@@ -24,8 +24,8 @@ const config: Config = {
           "lg": "0.5rem",
           "xl": "0.5rem",
           "2xl": "0.5rem",
-          "3xl": "0rem",
-          "4xl": "0rem",
+          "3xl": "0.5rem",
+          "4xl": "0.5rem",
         },
       },
       maxWidth: {
