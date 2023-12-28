@@ -15,13 +15,16 @@ const Hero = () => {
         priority={true}
         quality={75}
       />
-      <div className="">
-        <p className="text-3xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-          accusamus perspiciatis ratione dolore quidem quibusdam ducimus quos,
-          repellendus debitis, veniam consequatur excepturi est aut nisi.
-          Accusamus explicabo similique repellendus laudantium?
-        </p>
+      <div className="absolute m-auto top-[40vmin] left-0 right-0 z-50">
+        <div className="w-1/2 mx-auto">
+          <h2>
+            Earthly Echoes <br />{" "}
+            <span className="text-4xl">
+              Broadcasting the Beats of the Biosphere
+            </span>
+          </h2>
+          <button>Get Latest News!!</button>
+        </div>
       </div>
     </div>
   )
