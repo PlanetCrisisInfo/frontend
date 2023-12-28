@@ -5,7 +5,16 @@ import useCurrentUrl from "@/hooks/useCurrentUrl"
 function Nav() {
   const currentUrl = useCurrentUrl()
   const isHome = currentUrl === "/"
-  const theme: Theme = isHome ? "happy" : "sad"
+  const isExpPage = currentUrl === "/exp"
+  let theme: Theme
+
+  if (isHome) {
+    theme = "happy"
+  } else if (isExpPage) {
+    theme = "sad"
+  } else {
+    theme = "neutral"
+  }
 
   return (
     <nav className={`font-semibold leading-6 relative ${theme} bg z-50`}>
