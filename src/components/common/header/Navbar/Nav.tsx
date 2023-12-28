@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 import useCurrentUrl from "@/hooks/useCurrentUrl"
 
 function Nav() {
@@ -21,10 +23,18 @@ function Nav() {
       <div className="min-h-[8vh]  container flex justify-between items-center text-xl relative z-40 ">
         <h2 className="min-w-[20%] cursor-pointer">Logo</h2>
         <ul className="flex justify-between min-w-[60%] cursor-pointer">
-          <li>Home</li>
-          <li>About</li>
-          <li>Blog</li>
-          <li className="">Contact</li>
+          <li className={`${theme} link`}>
+            <Link href="/">Home</Link>
+          </li>
+          <li className={`${theme} link`}>
+            <Link href="/exp">Exp</Link>
+          </li>
+          <li className={`${theme} link`}>
+            <Link href="/blog">Blog</Link>
+          </li>
+          <li className={`${theme} link`}>
+            <Link href="/contact">Contact</Link>
+          </li>
         </ul>
       </div>
     </nav>

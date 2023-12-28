@@ -7,7 +7,7 @@ import styles from "./Hero.module.scss"
 interface IHeaderComponentProps {}
 const Hero = () => {
   return (
-    <div className="w-[100vw] max-w-[2160px] mx-auto heroHome bg ">
+    <div className="w-[100vw] max-w-[2160px] mx-auto heroHome bg overflow-hidden">
       <Image
         src={planetSvg}
         alt="planet"
@@ -16,14 +16,19 @@ const Hero = () => {
         quality={75}
       />
       <div className="absolute m-auto top-[40vmin] left-0 right-0 z-50">
-        <div className="w-1/2 mx-auto">
-          <h2>
+        <div className="container w-full lg:w-1/2 mx-auto">
+          <h2 className="mb-4">
             Earthly Echoes <br />{" "}
-            <span className="text-4xl">
-              Broadcasting the Beats of the Biosphere
+            <span className="text-3xl italic lg:text-4xl mt-1 inline-block">
+              Broadcasting the Beats of the{" "}
+              <i className="bg-gray-200 p-2 rounded-xl inline-block">
+                Biosphere
+              </i>
             </span>
           </h2>
-          <button>Get Latest News!!</button>
+          <button className="mx-auto lg:mx-0 flex du-btn happy btn">
+            Latest News !!
+          </button>
         </div>
       </div>
     </div>

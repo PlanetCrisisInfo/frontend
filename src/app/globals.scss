@@ -76,11 +76,11 @@
     }
 
     &.btn {
-      @apply bg-yellow-600  text-slate-100 hover:bg-yellow-500;
+      @apply bg-yellow-300  text-slate-100 hover:bg-yellow-400;
     }
 
     &.link {
-      @apply text-yellow-600 flex items-center gap-2 py-4 transition-colors duration-300 hover:text-yellow-500  focus:outline-none focus-visible:outline-none lg:px-8 underline;
+      @apply text-yellow-300 flex items-center gap-2 py-4 transition-colors duration-300 hover:text-yellow-400  focus:outline-none focus-visible:outline-none lg:px-8 underline;
     }
 
     &.link-active {
