@@ -128,10 +128,13 @@ const Services = ()  =>{
                   Read More
                 </div>
               </div>
-              <img
+              <Image
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/6155ce25a052f68cd40e70652714a22ac3ef28f9c9b0b39bad0b7a594d75d160?"
                 className="aspect-[1.11] object-contain object-center w-[88px] overflow-hidden self-center max-w-full mt-12 max-md:mt-10"
+                width={300}
+                height={300}
+                alt="image"
               />
               <div className="text-zinc-600 text-center text-base leading-7 self-center whitespace-nowrap mt-7">
                 Social Media Marketing
