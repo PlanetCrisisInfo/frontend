@@ -1,4 +1,4 @@
-
+import Image from "next/image"
 
 const Services = ()  =>{
   return(
@@ -140,10 +140,13 @@ const Services = ()  =>{
                 For marketing professionals research online.
               </div>
               <div className="self-center flex items-center gap-3 mt-8">
-                <img
+                <Image
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/eda73c840c60992e5e9b761554d31cc0664d83f7c54c34d4e54213e54c2ce6a4?"
                   className="aspect-[2.63] object-contain object-center w-[21px] fill-zinc-600 stroke-[1px] stroke-zinc-600 overflow-hidden shrink-0 max-w-full my-auto"
+                  width={300}
+                  height={300}
+                  alt="image"
                 />
                 <div className="text-zinc-600 text-base leading-7 self-stretch">
                   Read More

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["images.unsplash.com", "assets.vercel.com"],
+    domains: ["images.unsplash.com", "assets.vercel.com",'cdn.builder.io'],
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
