@@ -27,7 +27,7 @@ const Hero = () => {
                 </i>
               </span>
             </h2>
-            <button className="mx-auto lg:mx-0 flex du-btn happy btn">
+            <button className="mx-auto lg:mx-0 flex du-btn happy btn ">
               Latest News !!
             </button>
           </div>

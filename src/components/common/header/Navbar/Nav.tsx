@@ -19,7 +19,7 @@ function Nav() {
   }
 
   return (
-    <nav className={`font-semibold leading-6 relative ${theme} bg z-50`}>
+    <nav className={`font-semibold leading-6 relative z-50 ${theme} bg`}>
       <div className="min-h-[8vh]  container flex justify-between items-center text-xl relative z-40 ">
         <h2 className="min-w-[20%] cursor-pointer">Logo</h2>
         <ul className="flex justify-between min-w-[60%] cursor-pointer">
