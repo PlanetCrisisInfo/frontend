@@ -6,8 +6,8 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 const Services = ()  =>{
   return(
     <div className="flex flex-col items-stretch px-5">
-      <div className="text-zinc-900 text-center text-5xl font-bold leading-[61.88px] capitalize self-center max-md:max-w-full max-md:text-4xl">
-        Latest earth services
+      <div className="text-center  font-bold leading-[61.88px]  self-center max-md:max-w-full max-md:text-4xl">
+       <h1> Latest earth services</h1>
       </div>
       <div className="text-zinc-600 text-center text-base leading-7 self-center max-w-[594px] mt-8 max-md:max-w-full">
         Integer vehicula diam et sollicitudin scelerisque. Vestibulum
@@ -22,7 +22,7 @@ const Services = ()  =>{
               <div className="text-zinc-600 text-center text-base leading-7 self-center whitespace-nowrap mt-7">
                 Earth Service 1
               </div>
-              <div className="text-zinc-900 text-center text-2xl font-medium leading-9 capitalize self-stretch mt-4">
+              <div className=" text-center text-2xl font-medium leading-9 capitalize self-stretch mt-4">
                Find out more here,
               </div>
               <div className="self-center flex items-center gap-2 mt-8">
