@@ -7,7 +7,7 @@ const Services = ()  =>{
   return(
     <div className="flex flex-col items-stretch px-5">
       <div className="text-zinc-900 text-center text-5xl font-bold leading-[61.88px] capitalize self-center max-md:max-w-full max-md:text-4xl">
-        Best of our service
+        Latest earth services
       </div>
       <div className="text-zinc-600 text-center text-base leading-7 self-center max-w-[594px] mt-8 max-md:max-w-full">
         Integer vehicula diam et sollicitudin scelerisque. Vestibulum
