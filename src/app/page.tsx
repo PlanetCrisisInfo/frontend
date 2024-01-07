@@ -7,7 +7,7 @@ export default function HomePage() {
     <>
       <Hero />
       <Ellipses />
-      <section>
+      <section className="bg-gray-100 text-slate-800">
         <div className="container">
           <h1 className="">Home Page</h1>
         </div>

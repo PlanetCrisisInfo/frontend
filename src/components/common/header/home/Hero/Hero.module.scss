@@ -1,0 +1,15 @@
+.planet {
+  overflow: hidden;
+  transform: scale(2.5) translateY(-10%);
+}
+
+@media screen and (min-width: 1200px) {
+  .planet {
+    transform: scale(1.4);
+  }
+}
+@media screen and (min-width: 1500px) {
+  .planet {
+    transform: scale(1);
+  }
+}

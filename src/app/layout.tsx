@@ -1,10 +1,7 @@
 import type { Metadata } from "next"
 import "./globals.scss"
 
-import { headers } from "next/headers"
-
 import Navbar from "@/components/common/header/Navbar"
-import { extractPathname } from "@/utils/extractpathname"
 
 export const metadata: Metadata = {
   title: "Planet Crisis",
@@ -17,17 +14,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const headersList = headers()
-  // read the custom x-url header
-  const header_url = headersList.get("x-url") || ""
-
-  const pathname = extractPathname(header_url)
-
   return (
     <html lang="en">
       <body>
-        <Navbar pathname={pathname} />
-        {children}
+        <div className="bg-slate-100">
+          <div className="mx-auto max-w-[2160px]">
+            <Navbar />
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   )
